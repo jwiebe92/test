@@ -47,15 +47,10 @@ def weather_info(station_name: str):
         current_path = os.getcwd()
         # in csv umwandeln/exportieren
         df = pd.read_csv(current_path + "\\" + txt_data + "")
-        print(df.shape)
-        print(df.head(3))
         # df.columns = [
         #     'Stations ID , Messdatum , QN , Luftdruck in Stationshoehe der voran. 10 min , momentane Lufttemperatur in 2m Hoehe, Momentane Temperatur in 5 cm Hoehe, relative Feucht. in 2m Hoehe, Taupunkttemperatur in 2m, Taupunkttemperatur in 2m Hoehe, eor']
-        print(df.head(3))
-        print(df.shape)
         df.to_csv(txt_data + ".csv", sep=",", encoding='utf-8', index=False)
-        df_csv = pd.read_csv(txt_data + ".csv")
-
+        # df_csv = pd.read_csv(txt_data + ".csv")
         # df_csv.rename(columns=({'STATIONS_ID': 'Stations ID' , 'MESS_DATUM': 'Messdatum' , 'QN': 'QN' , 'PP_10': 'Luftdruck in Stationshoehe der voran. 10 min' , 'TT_10': 'momentane Lufttemperatur in 2m Hoehe',
         #                     'TM5_10': 'Momentane Temperatur in 5 cm Hoehe', 'RF_10': 'relative Feucht. in 2m Hoehe', 'TD_10': 'Taupunkttemperatur in 2m', 'eor': 'eor'}))
         #

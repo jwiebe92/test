@@ -70,8 +70,6 @@ def save_to_csv(txt_files):
         # df_csv.rename(columns=({'STATIONS_ID': 'Stations ID' , 'MESS_DATUM': 'Messdatum' , 'QN': 'QN' , 'PP_10': 'Luftdruck in Stationshoehe der voran. 10 min' , 'TT_10': 'momentane Lufttemperatur in 2m Hoehe',
         #                     'TM5_10': 'Momentane Temperatur in 5 cm Hoehe', 'RF_10': 'relative Feucht. in 2m Hoehe', 'TD_10': 'Taupunkttemperatur in 2m', 'eor': 'eor'}))
 
-        # TODO Spaltennamen ändern und MessDatum muss korrekt übergeben werden
-
 
 # -> sollte "Station nicht vorhanden!" ausgeben
 weather_info("00797")

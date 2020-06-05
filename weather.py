@@ -7,9 +7,6 @@ import pandas as pd
 import glob
 
 
-# TODO StationID?
-# TODO CSV Spaltennamen?
-# TODO Scientific Notation von Messdatum?
 
 # station_ID ist die ID der jeweiligen Stadt aus der .txt
 def weather_info(station_name: str):
@@ -61,8 +58,6 @@ def save_to_csv(txt_files):
         print(df.head(5))
         print(df.shape)
 
-        # df.columns = [
-        #     'Stations ID , Messdatum , QN , Luftdruck in Stationshoehe der voran. 10 min , momentane Lufttemperatur in 2m Hoehe, Momentane Temperatur in 5 cm Hoehe, relative Feucht. in 2m Hoehe, Taupunkttemperatur in 2m, Taupunkttemperatur in 2m Hoehe, eor']
 
         # Das das Messdatum falsch formattiert in Excel gespeichert wird, lieg an Excel selbst. -> Spalte muss auf Zahlenformat umgestellt werden
         df.to_csv(txt_data + ".csv", sep=",", encoding='utf-8', index=False)
